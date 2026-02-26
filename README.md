@@ -11,13 +11,9 @@ double monthlypayment;
 double insurance;
 float fulltank;
 float weeklygas;
-float percent = 100; // used to give a number as a percent
-int interest; 
-float Irate = interest / percent;
 float adtexp;
 
  
- //annual expenses
  
  cout << "How much is your monthly car loan: "; // first requirement
  cin >> monthlypayment;
@@ -34,14 +30,17 @@ float adtexp;
  float monthlygasprice = fulltank * weeklygas * 4; // equation stored in one variable
 
  cout << "This is your monthly gas price: " << monthlygasprice << endl; // displays the result of the equation stored in monthlygasprice 
-
- cout << "what is your monthly interest rate on your monthly payment(no %): "; // using this to accurately find the true annual cost of their automobile. Telling the user no to input the % as it means something else in c++
- cin >> interest;
  
- cout << " what is cost of any addtional and consistant expenses(if none skip by entering zero): "; // tires, maintinance, and oil aren't consistent expenses so i added this just in cases someone has a routine change of one of these things or something else similar
+ cout << "what is cost of any addtional and consistant expenses(if none skip by entering zero): "; // tires, maintinance, and oil aren't consistent expenses so i added this just in cases someone has a routine change of one of these things or something else similar
  cin >> adtexp;
  
- float tmc = monthlypayment + monthlypayment * Irate + monthlygasprice + adtexp + insurance;
+ float tmc = monthlypayment + monthlygasprice + adtexp + insurance; // total monthly cost equation
  
  cout << "the total monthly cost of your vehicle(assuming its not your first month) is: $" << tmc << endl; // total monthly cost display
+ 
+ float tyex = tmc * 12; // the eqaution for the total car expenses annually
+ 
+ cout << "your total yearly car expenses including interest are: $" << tyex << endl;
+ 
+ 
 }
