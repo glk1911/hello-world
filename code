@@ -26,16 +26,34 @@ vector<string> complocs;
 int i = 0;
 
 void Inventory(){
+    cout << "--------------------------Inventory--------------------------" << endl;
+    cout << "-------------------------------------------------------------" << endl;
+    
+ 
+    cout << "| " << left << setw(10) << "item#"
+         << "| " << left << setw(14) << "name"
+         << "| " << left << setw(11) << "stock"
+         << "| " << left << setw(12) << "location"
+         << "| " << left << setw(10) << "demand"
+         << "| " << endl;
 
-cout << "---------------------INVENTORY---------------------" << endl;
-cout << "------|---name---|---stock---|-location-|--demand--|" << endl;
+
+    cout << "|-----------|---------------|------------|-------------|-----------|" << endl;
 
 
-for (int i = 0; i < compnames.size(); i++) {
-    cout << "item#" << left << setw(6) << i+1 << "|" << left << setw(10) << compnames[i] << "|" << left << setw(11) << compnums[i] << "|" << left << setw(10) << complocs[i] << "|" << left << setw(10) << compdemd[i] << "|" << endl;
+    for (int i = 0; i < compnames.size(); i++) {
+        cout << "| " << left << setw(10) << "item#" + to_string(i + 1)
+             << "| " << left << setw(14) << compnames[i]
+             << "| " << left << setw(11) << compnums[i]
+             << "| " << left << setw(12) << complocs[i]
+             << "| " << left << setw(10) << compdemd[i]
+             << "| " << endl;
+    }
+    
+    cout << "---------------------------------------------------------------------" << endl;
 }
-        
-}
+
+
 
 void Inventorymode(){
 
@@ -139,6 +157,7 @@ if(mode == "2"){
 
 while(mode != "2" && mode != "1" ){
     cout << "Invalid Input. Try again: ";
+    cin >> mode;
 }
 
 
