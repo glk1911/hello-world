@@ -89,7 +89,7 @@ do{
     }
     
     cout << "your item is complete and has been added to the Inventory," <<
-    "\n Would you like to see your Inventory(y for yes n for no) or press e to end the program";
+    "\n Would you like to see your Inventory(y for yes n for no) or press e to end the program: ";
     cin >> cinv;  
     
     if(cinv == "y"){
@@ -123,8 +123,9 @@ cout << "***************************************" << endl;
 cout << "------------Welcome to SECC------------" << endl;
 cout << "(Small Electrical Component Calculator)" << endl;
 cout << "-------& Inventory keeping system------" << endl;
-cout << "***************************************" << endl;
-cout << "this system uses weight to calculate components" << endl;
+cout << "***************************************" << 
+"\n                                             " << endl;
+cout << "this system keeps Invetory and calculates hard to count Components" << endl;
 cout << "pick your mode 1) for short term, 2) for inventory mode: ";
 cin >> mode;
 
