@@ -1,3 +1,1 @@
-# hello-world
-practice
-i like money and sports im a sophmore
+this is like a calculator that also keeps inventory
